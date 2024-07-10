@@ -1,0 +1,39 @@
+<template>
+<!--  <div id="leftDecoration" class="frame"></div>-->
+<!--  <div id="rightDecoration" class="frame"></div>-->
+<!--  <div id="topDecoration" class="frame"></div>-->
+<!--  <div id="bottomDecoration" class="frame"></div>-->
+  <div id="content">
+  <Sidebar />
+
+  <main id="main" className="main">
+    <!-- {/*<BlogPosts posts={posts}/>*/} -->
+    <section className="content">
+      <!-- {content} -->
+      <router-view></router-view>
+    </section>
+
+  </main>
+  </div>
+</template>
+
+<script setup lang="ts">
+import Sidebar from './components/Sidebar.vue';
+</script>
+
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
+</style>
