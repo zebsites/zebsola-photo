@@ -1,0 +1,19 @@
+.swiper-button-next, .swiper-button-prev {
+    color: var(--text-color) !important;
+    height: 40px !important;
+    width: 20% !important;
+    top: auto !important;
+    bottom: 0 !important;
+    background: var(--background-accent);
+    border: 1px solid var(--text-color);
+    /*opacity: 0 !important;*/
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    opacity: 1 !important;
+}
+
+.swiper-button-next svg, .swiper-button-prev svg {
+    height: 20px !important;
+
+}

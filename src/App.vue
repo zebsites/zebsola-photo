@@ -1,24 +1,28 @@
 <template>
-<!--  <div id="leftDecoration" class="frame"></div>-->
-<!--  <div id="rightDecoration" class="frame"></div>-->
-<!--  <div id="topDecoration" class="frame"></div>-->
-<!--  <div id="bottomDecoration" class="frame"></div>-->
+  <!--  <div id="leftDecoration" class="frame"></div>-->
+  <!--  <div id="rightDecoration" class="frame"></div>-->
+  <!--  <div id="topDecoration" class="frame"></div>-->
+  <!--  <div id="bottomDecoration" class="frame"></div>-->
   <div id="content">
-  <Sidebar />
+    <MobileNav/>
+    <Sidebar/>
 
-  <main id="main" className="main">
-    <!-- {/*<BlogPosts posts={posts}/>*/} -->
-    <section className="content">
-      <!-- {content} -->
-      <router-view></router-view>
-    </section>
+    <main id="main" className="main">
+      <!-- {/*<BlogPosts posts={posts}/>*/} -->
+      <section className="content">
+        <!-- {content} -->
+        <div class="inner">
+          <router-view></router-view>
+        </div>
+      </section>
 
-  </main>
+    </main>
   </div>
 </template>
 
 <script setup lang="ts">
 import Sidebar from './components/Sidebar.vue';
+import MobileNav from "./components/MobileNav.vue";
 </script>
 
 <style scoped>
