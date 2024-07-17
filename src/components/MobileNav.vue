@@ -11,6 +11,7 @@
         <div>
           <router-link to="/contact">Contact</router-link>
           <router-link to="/about">About</router-link>
+          <a target="_blank" href="https://www.etsy.com/shop/ZGSPhotography">prints</a>
           <div class="a link-with-menu" @click="openMenu">Work</div>
           <ul id="photoProjects" :class="router.currentRoute.value.fullPath.indexOf('/work') >= 0 ? 'open' : ''">
             <li>
