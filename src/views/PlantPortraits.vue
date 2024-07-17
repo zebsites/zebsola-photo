@@ -12,8 +12,9 @@
       <swiper-slide><img src="/photos/plant-portraits/plant-portrait-01.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/plant-portraits/plant-portrait-02.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/plant-portraits/plant-portrait-03.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-04.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-05.jpg"/></swiper-slide>
+      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-10.jpg"/></swiper-slide>
+      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-11.jpg"/></swiper-slide>
+      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-09.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/plant-portraits/plant-portrait-06.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/plant-portraits/plant-portrait-07.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/plant-portraits/plant-portrait-08.jpg"/></swiper-slide>
