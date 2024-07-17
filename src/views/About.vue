@@ -6,9 +6,7 @@
     eight years old.
     Since then I have always been drawn to photography, and love to capture the essence of the areas, objects and people
     around me.</p>
-  <p>Check out
-    <router-link to="/work">my work</router-link>
-    , and feel free to
+  <p>Check out my work and feel free to
     <router-link to="/contact">contact me</router-link>
     at any time!
   </p>

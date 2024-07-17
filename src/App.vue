@@ -41,4 +41,8 @@ import router from "./router";
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
+.content:has(swiper-container) {
+  padding: 0;
+}
 </style>

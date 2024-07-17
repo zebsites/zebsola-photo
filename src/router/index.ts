@@ -1,6 +1,5 @@
 import {createWebHistory, createRouter} from "vue-router";
 import Index from "../views/Index.vue";
-import Photo from "../views/Photo.vue";
 import Contact from "../views/Contact.vue";
 import About from "../views/About.vue";
 import Colors from "../views/Colors.vue";
@@ -18,11 +17,6 @@ const routes = [
         path: "/contact",
         name: "Contact",
         component: Contact,
-    },
-    {
-        path: "/work",
-        name: "Work",
-        component: Photo,
     },
     {
         path: "/about",
