@@ -94,6 +94,7 @@
       overflow: hidden;
       height: auto;
       transition: flex 150ms;
+      padding-bottom: 5px;
 
       &.open {
         flex: 1;

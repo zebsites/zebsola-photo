@@ -7,7 +7,7 @@
     Since then I have always been drawn to photography, and love to capture the essence of the areas, objects and people
     around me.</p>
   <p>Check out
-    <router-link to="/photo">my work</router-link>
+    <router-link to="/work">my work</router-link>
     , and feel free to
     <router-link to="/contact">contact me</router-link>
     at any time!

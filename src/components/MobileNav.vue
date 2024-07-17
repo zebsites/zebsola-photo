@@ -11,7 +11,7 @@
         <div>
           <router-link to="/contact">Contact</router-link>
           <router-link to="/about">About</router-link>
-          <router-link to="/photo">Photo</router-link>
+          <router-link to="/work">Photo</router-link>
         </div>
         <Footer/>
       </nav>

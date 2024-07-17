@@ -131,7 +131,7 @@ img {
 #main {
   padding: 0 20px;
   background-color: var(--background-main);
-  text-align: right;
+  text-align: left;
   overflow: scroll;
   height: 100dvh;
   @media (max-width: 768px) {
@@ -147,6 +147,12 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   margin: 24px 0;
+  padding: 0 clamp(20px, 3.5vw, 100px);
+
+  &.work {
+    padding: 0;
+  }
+
   @media (max-width: 768px) {
     margin: 10px 0;
     height: calc(100dvh - 133px);
@@ -154,14 +160,19 @@ img {
 }
 
 .content p {
-  font-size: clamp(20px, 3.5vw, 80px);
+  font-size: clamp(20px, 2.5vw, 60px);
   font-weight: 100;
   margin: 0 0 1em 0;
-  text-align: right;
+  text-align: left;
   @media (max-width: 768px) {
     font-weight: 400;
     text-align: left;
   }
+}
+
+#home swiper-container swiper-slide {
+  height: 100%;
+  width: auto;
 }
 
 /*

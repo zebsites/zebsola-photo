@@ -7,9 +7,9 @@
     <MobileNav/>
     <Sidebar/>
 
-    <main id="main" className="main">
+    <main id="main" class="main">
       <!-- {/*<BlogPosts posts={posts}/>*/} -->
-      <section className="content">
+      <section class="content" :class="router.currentRoute.value.fullPath.indexOf('/work') >= 0 ? 'work' : ''">
         <!-- {content} -->
         <div class="inner">
           <router-view></router-view>
@@ -23,6 +23,7 @@
 <script setup lang="ts">
 import Sidebar from './components/Sidebar.vue';
 import MobileNav from "./components/MobileNav.vue";
+import router from "./router";
 </script>
 
 <style scoped>

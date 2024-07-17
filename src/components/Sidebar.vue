@@ -9,7 +9,7 @@
       <router-link to="/contact">Contact</router-link>
       <router-link to="/about">About</router-link>
       <div class="a link-with-menu" @click="openMenu">Work</div>
-      <ul id="photoProjects">
+      <ul id="photoProjects" :class="router.currentRoute.value.fullPath.indexOf('/work') >= 0 ? 'open' : ''">
         <li>
           <router-link to="/work/colors">Colors</router-link>
         </li>
@@ -30,8 +30,10 @@
 </template>
 <script setup lang="ts">
 import Footer from "./Footer.vue";
+import router from "../router";
 
 function openMenu($event: Event) {
+  // @ts-ignore
   const menu = $event.target?.nextSibling;
   console.log(menu);
   menu.classList.toggle('open');

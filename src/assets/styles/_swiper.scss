@@ -1,5 +1,5 @@
 swiper-container {
-  height: calc(100dvh - 114px);
+  height: calc(100dvh - 48px);
   padding-bottom: 24px;
   @media (max-width: 768px) {
     height: calc(100dvh - 153px);
@@ -10,6 +10,8 @@ swiper-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: auto;
   }
 }
 
