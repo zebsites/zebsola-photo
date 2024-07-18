@@ -22,7 +22,6 @@
       <swiper-slide><img src="/photos/city-of-angels/city-of-angels-11.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/city-of-angels/city-of-angels-12.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/city-of-angels/city-of-angels-13.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/city-of-angels/city-of-angels-13.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/city-of-angels/city-of-angels-14.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/city-of-angels/city-of-angels-15.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/city-of-angels/city-of-angels-16.jpg"/></swiper-slide>
