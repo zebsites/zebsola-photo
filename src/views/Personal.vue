@@ -8,7 +8,6 @@
         free-mode="true"
         :mousewheel="true"
         direction="horizontal"
-        scrollbar="true"
     >
       <swiper-slide><img src="/photos/personal/personal-01.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/personal/personal-02.jpg"/></swiper-slide>
@@ -20,10 +19,10 @@
       <swiper-slide><img src="/photos/personal/personal-08.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/personal/personal-09.jpg"/></swiper-slide>
     </swiper-container>
-    <!--    <div class="swiper-nav">
+       <div class="swiper-nav">
           <span class="custom-prev-button">&lt; prev</span>
           <span class="custom-next-button">next &gt;</span>
-        </div>-->
+        </div>
 
   </div>
 </template>

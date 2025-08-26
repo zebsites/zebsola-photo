@@ -1,30 +1,67 @@
 <template>
-  <div>
-    <!--    <swiper-container navigation-next-el=".custom-next-button"-->
-    <!--                      navigation-prev-el=".custom-prev-button">-->
-    <swiper-container
-        slides-per-view="auto"
-        space-between="10"
-        free-mode="true"
-        :mousewheel="true"
-        direction="horizontal"
-    >
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-01.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-02.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-03.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-10.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-11.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-09.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-06.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-07.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-08.jpg"/></swiper-slide>
-    </swiper-container>
-    <!--    <div class="swiper-nav">
-          <span class="custom-prev-button">&lt; prev</span>
-          <span class="custom-next-button">next &gt;</span>
-        </div>-->
-
+  <div class="gallery">
+    <template v-for="image in imageList" :key="image.fullSize">
+      <ImageLightbox 
+        :src="image.fullSize"
+        :thumbnail="image.thumbnail"
+      />
+    </template>
   </div>
 </template>
+
 <script setup lang="ts">
+import { provide, ref, onMounted } from 'vue'
+import ImageLightbox from '../components/ImageLightbox.vue'
+import { ImageListSymbol } from '../components/lightboxSymbol'
+
+interface ImagePair {
+  fullSize: string;
+  thumbnail: string;
+}
+
+// Create a reactive reference for the list of images
+const imageList = ref<ImagePair[]>([])
+
+// Get all full-size images and thumbnails
+const fullSizeImages = import.meta.glob<string>('../assets/plant-portraits/*.jpg', {
+  eager: true,
+  import: 'default'
+})
+
+const thumbnailImages = import.meta.glob<string>('../assets/plant-portraits/thumbnails/*.jpg', {
+  eager: true,
+  import: 'default'
+})
+
+// Process the images and create the image list
+onMounted(() => {
+  const fullSizePaths = Object.values(fullSizeImages)
+  const thumbnailPaths = new Map(
+    Object.values(thumbnailImages).map(path => [
+      path.split('/').pop()?.replace('thumbnail-', ''), // Get base filename
+      path
+    ])
+  )
+
+  imageList.value = fullSizePaths
+    .map(fullPath => {
+      const fileName = fullPath.split('/').pop() || ''
+      return {
+        fullSize: fullPath,
+        // Use thumbnail if available, otherwise use full-size image
+        thumbnail: thumbnailPaths.get(fileName) || fullPath
+      }
+    })
+    .sort((a, b) => {
+      // Extract numbers from filenames for natural sorting
+      const aName = a.fullSize.split('/').pop() || ''
+      const bName = b.fullSize.split('/').pop() || ''
+      const aNum = parseInt(aName.match(/\d+/)?.[0] || '0')
+      const bNum = parseInt(bName.match(/\d+/)?.[0] || '0')
+      return aNum - bNum
+    })
+})
+
+// Provide the image list to child components
+provide(ImageListSymbol, imageList)
 </script>

@@ -2,7 +2,7 @@
   <div class="sidebar">
     <header class="header">
       <h1 class="h1">
-        <router-link to="/">zeb sola</router-link>
+        <router-link to="/">zebulon sola</router-link>
       </h1>
     </header>
     <nav class="nav">
