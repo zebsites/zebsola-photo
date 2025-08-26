@@ -14,8 +14,8 @@
       <swiper-slide><img src="/photos/la-colors/colors-4.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/personal/personal-02.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/personal/personal-05.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-01.jpg"/></swiper-slide>
-      <swiper-slide><img src="/photos/plant-portraits/plant-portrait-07.jpg"/></swiper-slide>
+      <swiper-slide><img src="../assets/plant-portraits/plant-portrait-01.jpg"/></swiper-slide>
+      <swiper-slide><img src="../assets/plant-portraits/plant-portrait-07.jpg"/></swiper-slide>
       <swiper-slide><img src="/photos/los-feliz-5.jpg"/></swiper-slide>
     </swiper-container>
 
